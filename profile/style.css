@@ -14,6 +14,16 @@ body {
   color: #2C2A29;            /* Dark Charcoal / Taupe */
 }
 
+/* Penyesuaian reset kontrol form & gambar responsif */
+button, input, select, textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Batasi lebar halaman agar nyaman dibaca di desktop */
 main {
   max-width: 75ch;
@@ -22,8 +32,23 @@ main {
 }
 
 /* ============================================================
-   2. TEMA BENTO GRID CARD (Vertikal)
+   2. TEMA BENTO GRID CARD & HEADER (Vertikal)
    ============================================================ */
+/* Navigation Header Card */
+header {
+  max-width: 75ch;
+  margin-inline: auto;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #F2ECE4;
+  border: 1px solid #D8D0C5;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 /* Selector 1: Element Selector */
 section, article, aside {
   background-color: #F2ECE4; /* Soft Sand */
@@ -37,6 +62,7 @@ section, article, aside {
 header nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -54,7 +80,7 @@ a:hover, button:hover {
   text-decoration: underline;
 }
 
-a:focus-visible, button:focus-visible, input:focus-visible {
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline: 2px solid #1A5F7A;
   outline-offset: 3px;
 }
@@ -68,18 +94,22 @@ figcaption::before {
 tbody tr:nth-child(even) {
   background-color: #E8E0D5;
 }
-header {
-  max-width: 75ch;
-  margin-inline: auto;
-  margin-top: 1.5rem;
-  padding: 1rem 1.5rem;
-  background-color: #F2ECE4;
+
+/* Gaya Tabel Riwayat Pendidikan */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+}
+
+th, td {
+  padding: 0.6rem 0.8rem;
   border: 1px solid #D8D0C5;
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  text-align: left;
+}
+
+th {
+  background-color: #E8E0D5;
 }
 
 /* ============================================================
@@ -128,7 +158,6 @@ textarea {
   border-radius: 8px;
   background-color: #FFFFFF;
   color: #2C2A29;
-  font-family: inherit;
   font-size: 1rem;
 }
 
@@ -136,11 +165,6 @@ textarea {
 input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
   border-color: #C0392B;
   outline: 2px solid #C0392B;
-}
-
-input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
-  outline: 2px solid #1A5F7A;
-  outline-offset: 2px;
 }
 
 .form-hint {
