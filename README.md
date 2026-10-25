@@ -1,4 +1,4 @@
-# Laporan Tugas Web Profile - Pertemuan 2
+# Laporan Tugas Web Profile
 
 - **Nama / NIM:** RENO ALVIANSYAH KHAREL / 06.2025.1.07859
 - **Tema Terpilih:** Bento Grid (Soft Neutrals)
