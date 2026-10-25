@@ -39,11 +39,11 @@
     <!-- 1. Hero Section -->
     <section id="hero">
       <figure>
+        <h1>Halo, Reno disini</h1>
+        <p>Mahasiswa Teknik Informatika Semester 3</p>
         <img src="img/rnlovzee.jpeg" alt="Cinema visit KJL 2026" width="160" height="160">
         <figcaption>Reno tersenyum dengan idolanya</figcaption>
       </figure>
-      <h1>Halo, Reno disini</h1>
-      <p>Mahasiswa Teknik Informatika Semester 3</p>
     </section>
 
     <!-- 2. Tentang Saya -->
@@ -130,7 +130,7 @@
             <td>SMKN 1 Jetis</td>
           </tr>
           <tr>
-            <td>2023 – Sekarang</td>
+            <td>2023 – Now</td>
             <td>ITATS - Teknik Informatika</td>
           </tr>
         </tbody>
@@ -167,11 +167,125 @@
 
     <!-- 8. Kontak -->
     <section id="kontak">
-      <h2>Kontak</h2>
+      <h2>Kontak &amp; Pesan</h2>
       <address>
         <p>Email: <a href="mailto:rnpenceng123@gmail.com">rnpenceng123@gmail.com</a></p>
         <p>Telepon: <a href="tel:+628977080904">+62 897-7080-904</a></p>
       </address>
+
+      <form action="#" method="post" id="form-kontak">
+        <fieldset>
+          <legend>Kirim Pesan Langsung</legend>
+
+          <!-- 1. Text -->
+          <div class="form-group">
+            <label for="nama">Nama Lengkap *</label>
+            <input type="text" id="nama" name="nama" autocomplete="name" required minlength="3">
+          </div>
+
+          <!-- 2. Email -->
+          <div class="form-group">
+            <label for="email">Alamat Email *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+
+          <!-- 3. Tel -->
+          <div class="form-group">
+            <label for="telepon">Nomor Telepon *</label>
+            <input type="tel" id="telepon" name="telepon" autocomplete="tel" pattern="[0-9]{10,14}" required aria-describedby="hint-tel">
+            <small id="hint-tel" class="form-hint">Format: 08xxxxxxxxxx (10-14 digit angka).</small>
+          </div>
+
+          <!-- 4. Select -->
+          <div class="form-group">
+            <label for="kategori">Kategori Pesan *</label>
+            <select id="kategori" name="kategori" required>
+              <option value="">-- Pilih Kategori --</option>
+              <option value="diskusi">Diskusi Web / IT</option>
+              <option value="joki">Joki War Tiket</option>
+              <option value="musik">Kerja Sama Musik</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+
+          <!-- 5. Radio -->
+          <div class="form-group">
+            <p class="label-text">Preferensi Balasan *</p>
+            <label class="inline-label"><input type="radio" name="balasan" value="email" checked required> Email</label>
+            <label class="inline-label"><input type="radio" name="balasan" value="whatsapp"> WhatsApp</label>
+          </div>
+
+          <!-- 6. Textarea -->
+          <div class="form-group">
+            <label for="pesan">Isi Pesan *</label>
+            <textarea id="pesan" name="pesan" rows="4" required minlength="10" aria-describedby="hint-pesan"></textarea>
+            <small id="hint-pesan" class="form-hint">Tuliskan pesan minimal 10 karakter.</small>
+          </div>
+
+          <!-- 7. Checkbox -->
+          <div class="form-group">
+            <label class="inline-label">
+              <input type="checkbox" name="setuju" required> Saya menyetujui pengiriman data kontak ini.
+            </label>
+          </div>
+
+          <!-- Element Status untuk P10 -->
+          <p role="status" aria-live="polite" class="status-message" id="status-kontak"></p>
+
+          <button type="submit" class="btn-submit">Kirim Pesan</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- 9. Form Tambahan Sesuai Tema (Memenuhi Spesifikasi Slide 2) -->
+    <section id="form-layanan">
+      <h2>Layanan Joki War Tiket &amp; Request</h2>
+      <form action="#" method="post" id="form-joki">
+        <fieldset>
+          <legend>Formulir Pemesanan Joki / Request</legend>
+
+          <!-- 1. Text -->
+          <div class="form-group">
+            <label for="pemesan">Nama Pemesan *</label>
+            <input type="text" id="pemesan" name="pemesan" required minlength="3">
+          </div>
+
+          <!-- 2. Select -->
+          <div class="form-group">
+            <label for="event">Jenis Event / Layanan *</label>
+            <select id="event" name="event" required>
+              <option value="">-- Pilih Event --</option>
+              <option value="jkt48">Theater / Concert JKT48</option>
+              <option value="kpop">Konser K-Pop (BTS / EXO / dll)</option>
+              <option value="lirik">Request Penulisan Lirik Lagu</option>
+            </select>
+          </div>
+
+          <!-- 3. Number -->
+          <div class="form-group">
+            <label for="jumlah">Jumlah Tiket / Pesanan *</label>
+            <input type="number" id="jumlah" name="jumlah" min="1" max="5" value="1" required>
+          </div>
+
+          <!-- 4. Radio -->
+          <div class="form-group">
+            <p class="label-text">Kategori Tiket *</p>
+            <label class="inline-label"><input type="radio" name="kategori-tiket" value="vip" checked> VIP / CAT 1</label>
+            <label class="inline-label"><input type="radio" name="kategori-tiket" value="reguler"> Reguler / Festival</label>
+          </div>
+
+          <!-- 5. Textarea -->
+          <div class="form-group">
+            <label for="catatan">Catatan Khusus</label>
+            <textarea id="catatan" name="catatan" rows="3" placeholder="Contoh: Rincian tanggal event atau request lagu..."></textarea>
+          </div>
+
+          <!-- Status -->
+          <p role="status" aria-live="polite" class="status-message" id="status-joki"></p>
+
+          <button type="submit" class="btn-submit">Adu Keberuntungan War</button>
+        </fieldset>
+      </form>
     </section>
 
   </main>
