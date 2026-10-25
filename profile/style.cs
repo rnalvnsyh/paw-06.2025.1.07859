@@ -1,0 +1,70 @@
+/* ============================================================
+   1. RESET DASAR (Wajib di Paling Atas)
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #FBF9F5; /* Warm Off-White */
+  color: #2C2A29;            /* Dark Charcoal / Taupe */
+}
+
+/* Batasi lebar halaman agar nyaman dibaca di desktop */
+main {
+  max-width: 75ch;
+  margin-inline: auto;
+  padding: 1.5rem;
+}
+
+/* ============================================================
+   2. TEMA BENTO GRID CARD (Vertikal)
+   ============================================================ */
+/* Selector 1: Element Selector */
+section, article, aside {
+  background-color: #F2ECE4; /* Soft Sand */
+  border: 1px solid #D8D0C5;  /* Border tipis */
+  border-radius: 16px;       /* Sudut membulat khas Bento */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Selector 2: Descendant / Child Selector */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Selector 3: Attribute Selector */
+a[target="_blank"] {
+  font-weight: 600;
+  color: #1A5F7A;
+}
+
+/* Selector 4: Pseudo-class Selector */
+a:hover, button:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid #1A5F7A;
+  outline-offset: 3px;
+}
+
+/* Selector 5: Pseudo-element Selector */
+figcaption::before {
+  content: "📷 ";
+}
+
+/* Selector 6: Child / Nth-child Selector */
+tbody tr:nth-child(even) {
+  background-color: #E8E0D5;
+}
